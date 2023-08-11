@@ -16,8 +16,8 @@ namespace CRUDBasico
 
         protected void btnCalcular_Click(object sender, EventArgs e)
         {
-            int n1 = Convert.ToInt32(txtN1.Text);
-            int n2 = Convert.ToInt32(txtN2.Text);
+            double n1 = Convert.ToDouble(txtN1.Text);
+            double n2 = Convert.ToDouble(txtN2.Text);
             string op = txtOperador.Text;
             bool validacao = true;
 
@@ -60,7 +60,7 @@ namespace CRUDBasico
         /// Quando retornar -1, significa uma divisão inválida
         /// </summary>
         /// <returns></returns>
-        private double Dividir(int n1, int n2)
+        private double Dividir(double n1, double n2)
         {
             double resultado;
             if(n2 > 0) { 
@@ -73,19 +73,19 @@ namespace CRUDBasico
             return resultado;
         }
 
-        private double Multiplicar(int n1, int n2)
+        private double Multiplicar(double n1, double n2)
         {
             double resultado = n1 * n2;
             return resultado;
         }
 
-        private double Subtrair(int n1, int n2)
+        private double Subtrair(double n1, double n2)
         {
             double resultado = n1 - n2;
             return resultado;
         }
 
-        private double Somar(int n1, int n2)
+        private double Somar(double n1, double n2)
         {
             double resultado = n1 + n2;
             //MostrarMensagem(resultado.ToString());
