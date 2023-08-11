@@ -1,0 +1,73 @@
+﻿<style >
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Oxygen:wght@300;400&family=Poppins:ital,wght@1,200;1,300&family=Staatliches&display=swap');
+</style >
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #8086c7;
+    color: #130aee;
+    padding: 2em 0;
+}
+
+#h1Titulo {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Staatliches', cursive;
+}
+.center{
+    text-align:center;
+}
+
+nav{
+    margin: 1em 0em;
+}
+
+nav ul{
+          list-style   : none;
+      }
+
+      nav ul li{
+          display: inline;
+          margin: 0.5em 0.4em;
+      }
+
+      nav ul li a {
+          text-decoration:none;
+          color:aquamarine;
+      }
+
+        nav ul li a:hover{
+            color: #ffffff;
+        }
+
+h2{
+    text-align: center;
+}
+
+main{
+    padding: 2em;
+}
+
+    main section {
+        max-width: 15em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+input {
+    background-color: #f3f1e7;
+    margin: 0.3em;
+    padding: 0.2em;
+    color: #8086c7
+}
+
+footer {
+    background-color: #8086c7;
+    color: #130aee;
+    padding: 1em 0;
+}
+
+
