@@ -19,6 +19,7 @@ namespace CRUDBasico
             int n1 = Convert.ToInt32(txtN1.Text);
             int n2 = Convert.ToInt32(txtN2.Text);
             string op = txtOperador.Text;
+            bool validacao = true;
 
             double resultado = 0;
 
@@ -35,10 +36,23 @@ namespace CRUDBasico
                     break;
                 case "/":
                     resultado = Dividir(n1, n2);
+                    if(resultado == -1)
+                    {
+                       validacao = false;
+                    }
                     break;
                 default:
-                    MostrarMensagem("Operador Inválido");
+                        validacao = false;
                     break;
+            }
+            if (validacao)
+            {
+                string mensagem = "O resultado da operação é " + resultado + ".";
+                MostrarMensagem(mensagem);
+            }
+            else
+            {
+                MostrarMensagem("Não foi possível realizar a operação!");
             }
         }
 
