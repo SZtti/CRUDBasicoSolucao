@@ -33,7 +33,7 @@ namespace CRUDBasico
                 case "*":
                     resultado = Multiplicar(n1, n2);
                     break;
-                case "-":
+                case "/":
                     resultado = Dividir(n1, n2);
                     break;
                 default:
@@ -42,9 +42,20 @@ namespace CRUDBasico
             }
         }
 
+        /// <summary>
+        /// Quando retornar -1, significa uma divisão inválida
+        /// </summary>
+        /// <returns></returns>
         private double Dividir(int n1, int n2)
         {
-            double resultado = n1 - n2;
+            double resultado;
+            if(n2 > 0) { 
+                resultado = n1 / n2;
+            }
+            else
+            {
+                resultado = -1;
+            }
             return resultado;
         }
 
@@ -66,6 +77,7 @@ namespace CRUDBasico
             //MostrarMensagem(resultado.ToString());
             return resultado;
         }
+
 
         private void MostrarMensagem(string mensagem)
         {
